@@ -28,16 +28,16 @@ const App = () => {
       <header className="App-header">
         <p>My Okta-React app</p>
         <img src={logo} className="App-logo" alt="logo" />
-      <Security
-        oktaAuth={oktaAuth}
-        onAuthRequired={customAuthHandler}
-        restoreOriginalUri={restoreOriginalUri}
-      >
-        <Route path="/" exact component={Home} />
-        <SecureRoute path="/protected" component={Protected} />
-        <Route path="/login" render={() => <Login />} />
-        <Route path="/login/callback" component={LoginCallback} />
-    </Security>
+        <Security
+          oktaAuth={oktaAuth}
+          onAuthRequired={customAuthHandler}
+          restoreOriginalUri={restoreOriginalUri}
+        >
+          <Route path="/" exact component={Home} />
+          <SecureRoute path="/protected" component={Protected} />
+          <Route path="/login" render={() => <Login />} />
+          <Route path="/login/callback" component={LoginCallback} />
+        </Security>
     </header>
     </div>
   );

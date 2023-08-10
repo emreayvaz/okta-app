@@ -30,13 +30,10 @@ const Home = () => {
 
   const handleLogout = async () => oktaAuth.signOut();
 
-  const handleRequest = async () => extCallback(authState.accessToken.accessToken, authState.idToken.claims.email, authState.idToken.claims.name).then((resp)=>console.log(resp.data));
-
   return (
     <div id="home">
         <Link to="/">Home</Link> | &nbsp;
         <Link id="protected" to="/protected">Protected</Link> | &nbsp;
-        {authState.isAuthenticated && <button id="logout-button" type="button" onClick={handleRequest}>İstek At</button> } | &nbsp;
         {
           authState.isAuthenticated
             ? <button id="logout-button" type="button" onClick={handleLogout}>Logout</button>

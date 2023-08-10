@@ -1,10 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { SecureRoute, LoginCallback } from "@okta/okta-react";
+import { LoginCallback } from "@okta/okta-react";
 import Home from "./Home";
 import Login from "./Login";
-import Protected from "./Protected";
-
 import "./App.css";
 import Layout from "./Layout";
 

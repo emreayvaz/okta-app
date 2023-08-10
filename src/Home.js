@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useOktaAuth } from '@okta/okta-react';
 import axios from "axios";
 
-const extCallback = async (idToken,email,fullname) => {
+export const extCallback = async (idToken,email,fullname) => {
   return await axios.post("https://localhost:7001/tr/account/okta-login-register",{
     idToken:idToken,
     email:email,
